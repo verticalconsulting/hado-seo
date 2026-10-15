@@ -18,6 +18,12 @@ routes = [
 [vars]
 HADO_RENDER_ENDPOINT = "https://serve.hadoseo.com/v1/render"
 
+# Used by `wrangler preview` (Workers Builds on non-production branches).
+# Previews get no HADO_API_KEY secret, so Hado answers 401 and the Worker
+# fails open to the origin.
+[previews.vars]
+HADO_RENDER_ENDPOINT = "https://serve.hadoseo.com/v1/render"
+
 # Your API key is a SECRET, never a [vars] entry (vars are visible in the
 # dashboard and in this file):
 #   npx wrangler secret put HADO_API_KEY
