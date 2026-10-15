@@ -1,7 +1,7 @@
 # Hado SEO Cloudflare Worker — https://docs.hadoseo.com/integrations/cloudflare-worker
 
 # The Worker's name in YOUR Cloudflare account — rename it to anything you like.
-name = "my-site-seo-proxy"
+name = "hado-seo"
 main = "src/worker.js"
 compatibility_date = "2025-05-05"
 
@@ -10,8 +10,9 @@ compatibility_date = "2025-05-05"
 # Replace example.com with your domain in both patterns and zone_name.
 # Keep routes above the [vars] section.
 routes = [
-  { pattern = "example.com/*", zone_name = "example.com" },
-  { pattern = "www.example.com/*", zone_name = "example.com" }
+  { pattern = "verticalconsulting.net/*", zone_name = "verticalconsulting.net" },
+  { pattern = "www.verticalconsulting.net/*", zone_name = "verticalconsulting.net" },
+  { pattern = "ai.verticalconsulting.net/*", zone_name = "verticalconsulting.net" }
 ]
 
 [vars]
